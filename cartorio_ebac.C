@@ -154,6 +154,10 @@ int main()
 			case 3:
 				deletar();
 			break;
+
+			case 4:
+			printf("obrigado por utilizar o sistema"");
+			break;
 			
 			default:
 				printf("Essa opçcao não está disponível!\n");

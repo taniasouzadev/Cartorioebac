@@ -1,24 +1,24 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usu·rio 
-#include <stdlib.h> // biblioteca de alocaÁ„o de espaÁo em memÛria
-#include <locale.h> // biblioteca de alocaÁıes de texto por regi„o
-#include <string.h> //biblioteca respons·vel por cuidar das string
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usu√°rio 
+#include <stdlib.h> // biblioteca de aloca√ß√£o de espa√ßo em mem√≥ria
+#include <locale.h> // biblioteca de aloca√ß√µes de texto por regi√£o
+#include <string.h> //biblioteca respons√°vel por cuidar das string
 
-int registro() // FunÁ„o respos·vel por cadastrar os usu·rios no sistemas
+int registro() // Fun√ß√£o respos√°vel por cadastrar os usu√°rios no sistemas
 {
-	//inicio criaÁ„o de v·riaveis/string
-	// Char serve para armazenar UM caracter ao fazermos alocamos 1 byte de memÛria para armazenar o cracter
-	//a sintaxe dele È: char nomedavariavel
+	//inicio cria√ß√£o de v√°riaveis/string
+	// Char serve para armazenar UM caracter ao fazermos alocamos 1 byte de mem√≥ria para armazenar o cracter
+	//a sintaxe dele √©: char nomedavariavel
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
-	//final criaÁ„o de v·riaveis/string
+	//final cria√ß√£o de v√°riaveis/string
 	
-	printf("Digite o cpf a ser cadastrado:"); //coletando informaÁ„o de usu·rio
+	printf("Digite o cpf a ser cadastrado:"); //coletando informa√ß√£o de usu√°rio
 	scanf("%s", cpf); //%s refere-se a string
 	
-	strcpy(arquivo, cpf); //respons·vel por copiar os valores das string.
+	strcpy(arquivo, cpf); //respons√°vel por copiar os valores das string.
 	
 	FILE *file; //cria o arquivo
 	file = fopen(arquivo, "w"); //cria o arquivo e o "W" significa escrever
@@ -74,12 +74,12 @@ int consulta()
 	
 	if(file == NULL)
 	{
-		printf("N„o foi possÌvel abrir o arquivo, n„o localizado!.\n");
+		printf("N√£o foi poss√≠vel abrir o arquivo, n√£o localizado!.\n");
 	}
 	
 	while(fgets(conteudo, 200, file) !=NULL)
 	{
-		printf("\nEssas s„o as informaÁıes do usu·rio: ");
+		printf("\nEssas s√£o as informa√ß√µes do usu√°rio: ");
 		printf("%s", conteudo);
 		printf("\n\n");
 	}
@@ -87,7 +87,7 @@ int consulta()
 	system("pause");
 	
 }
-	//printf("VocÍ escolheu consultar os nomes!\n");
+	//printf("Voc√™ escolheu consultar os nomes!\n");
 ///////	system("pause");	
 
 
@@ -106,7 +106,7 @@ int deletar()
 	
 	if(file == NULL)
 	{
-		printf("o usu·rio n„o se encontra no sistema!.\n");
+		printf("o usu√°rio n√£o se encontra no sistema!.\n");
 		system("pause");
 		
 		}	
@@ -116,7 +116,7 @@ int deletar()
 
 int main()
 { 
-	int opcao=0; // Definindo as v·riaveis
+	int opcao=0; // Definindo as v√°riaveis
 	int laco=1;
 	
 	for(laco=1;laco=1;) 
@@ -127,26 +127,28 @@ int main()
 		
 		setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-		printf("### CartÛrio da EBAC ###\n\n"); //inicio do menu
-		printf("Escolha da opÁ„o desejada do menu:\n\n");
+		printf("### Cart√≥rio da EBAC ###\n\n"); //inicio do menu
+		printf("Escolha da op√ß√£o desejada do menu:\n\n");
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar Nomes \n");
 		printf("\t3 - Deletar Nomes \n\n"); 
-		printf("opÁ„o:"); //fim do menu
+		printf("\t4 - Deletar Nomes \n\n");
+
+		printf("op√ß√£o:"); //fim do menu
 	
-		scanf("%d", &opcao); //armazenamento a escolha do usu·rio
+		scanf("%d", &opcao); //armazenamento a escolha do usu√°rio
 	
-		system("cls"); //respons·vel por limpar a tela
+		system("cls"); //respons√°vel por limpar a tela
 		
-		switch(opcao) //inicio da seleÁ„o do menu
+		switch(opcao) //inicio da sele√ß√£o do menu
 		{
 			case 1:
-				registro(); //chamada de funÁıes
+				registro(); //chamada de fun√ß√µes
 				system("pause");
 			break;
 			
 			case 2:
-				consulta(); //chamada de funÁıes
+				consulta(); //chamada de fun√ß√µes
 			break;
 			
 			case 3:
@@ -154,10 +156,10 @@ int main()
 			break;
 			
 			default:
-				printf("Essa opÁcao n„o est· disponÌvel!\n");
+				printf("Essa op√ßcao n√£o est√° dispon√≠vel!\n");
 				system ("pause");	
 			break;
-		}	//fim da seleÁ„o
+		}	//fim da sele√ß√£o
 	}
 }
 

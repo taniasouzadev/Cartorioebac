@@ -132,7 +132,7 @@ int main()
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar Nomes \n");
 		printf("\t3 - Deletar Nomes \n\n"); 
-		printf("\t4 - Deletar Nomes \n\n");
+		printf("\t4 - Sair do siatema \n\n");
 
 		printf("opção:"); //fim do menu
 	

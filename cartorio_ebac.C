@@ -143,20 +143,21 @@ int main()
 		switch(opcao) //inicio da seleção do menu
 		{
 			case 1:
-				registro(); //chamada de funções
-				system("pause");
+			registro(); //chamada de funções
+			system("pause");
 			break;
 			
 			case 2:
-				consulta(); //chamada de funções
+			consulta(); //chamada de funções
 			break;
 			
 			case 3:
-				deletar();
+			deletar();
 			break;
 
 			case 4:
-			printf("obrigado por utilizar o sistema"");
+			printf("obrigado por utilizar o sistema!\n\n");
+			return 0;
 			break;
 			
 			default:
